@@ -14,14 +14,14 @@ def alunos = [
 // 2. Regras da escola
 // ---------------------------------------------------------------
 final MEDIA_APROVACAO = 7.0
-final MEDIA_RECUPERACAO = 6.5
+final MEDIA_RECUPERACAO = 5.0
 
 // ---------------------------------------------------------------
 // 3. Cálculo da média
 // ---------------------------------------------------------------
 def calcularMedia(List notas) {
     def soma = 0
-    for (int i = 1; i < notas.size(); i++) {
+    for (int i = 0; i < notas.size(); i++) {
         soma += notas[i]
     }
     return soma / notas.size()
@@ -31,7 +31,7 @@ def calcularMedia(List notas) {
 // 4. Situação final do aluno
 // ---------------------------------------------------------------
 def situacao(media, mediaAprovacao, mediaRecuperacao) {
-    if (media > mediaAprovacao) {
+    if (media >= mediaAprovacao) {
         return "Aprovado"
     } else if (media >= mediaRecuperacao) {
         return "Recuperação"

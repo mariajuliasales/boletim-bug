@@ -9,6 +9,11 @@ repositories {
 
 dependencies {
     implementation 'org.apache.groovy:groovy:4.0.24'
+    testImplementation 'org.spockframework:spock-core:2.4-groovy-4.0'
+}
+
+tasks.withType(Test).configureEach {
+    useJUnitPlatform()
 }
 
 application {
