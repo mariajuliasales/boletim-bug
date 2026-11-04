@@ -31,6 +31,16 @@ A primeira execução pode demorar um pouco, pois as dependências serão baixad
 
 > Se aparecer "Permission denied" no Linux/macOS, rode `chmod +x gradlew` e tente novamente.
 
+## Testes automatizados
+
+Para executar os testes Spock, rode:
+
+    ./gradlew test
+
+Os testes verificam se a primeira nota entra no cálculo da média, se uma média
+de 6.00 é classificada como recuperação e se médias exatamente iguais a 7.00
+são aprovadas.
+
 ## Estrutura do projeto
 
     cacandoBugMediaEscolar/
