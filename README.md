@@ -82,3 +82,17 @@ primeiro acerto.
 - [ ] A média de todos os alunos está igual à esperada
 - [ ] A situação de todos os alunos está igual à esperada
 - [ ] Consigo explicar, com minhas palavras, cada bug que corrigi
+
+## Sobre Bug
+
+Foram encontrados e corrigidos três bugs no `Boletim.groovy`:
+
+- **Primeira nota ignorada:** o laço que soma as notas começava no índice `1`,
+  deixando de fora a nota no índice `0`. O laço agora começa em `0` e soma
+  todas as notas do aluno.
+- **Limite de recuperação incorreto:** a constante `MEDIA_RECUPERACAO` estava
+  definida como `6.5`, embora a regra da escola estabeleça `5.0`. A constante
+  foi atualizada para `5.0`.
+- **Média igual a 7 não aprovava:** a condição de aprovação exigia uma média
+  maior que `7.0`. O operador foi alterado de `>` para `>=`, para que alunos
+  com média exatamente `7.0` também sejam aprovados.
